@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>TileSet (tilemap.TileSet)</title>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="style.css" rel="stylesheet" />
+        <script src="script.js" type="text/javascript"></script>
+
+	
+	<link href="search-results.html" rel="prefetch" />
+</head>
+<body>
+	<div id="page-header">
+		<div id="logotype">
+		<span>Documentation</span>
+		<nav>
+			<a href="http://dlang.org/">Dlang.org</a>
+		</nav>
+		</div>
+
+		<form action="search-docs.html" id="search">
+			<input name="searchTerm" placeholder="Find a symbol name..." type="search" />
+			<input type="submit" value="Go" />
+		</form>
+	</div>
+	<div id="page-body">
+		<div id="page-content">
+		<h1>TileSet</h1><div class="breadcrumbs"><a class="breadcrumb" href="tilemap.html">tilemap</a> </div><div><div class="documentation-comment synopsis"><div><p>A struct for managing a tileset.</p><p>This struct is responsible for loading a tileset image, and provides
+functionality for rendering individual tiles and the entire tileset.</p></div></div></div><div class="annotated-prototype"><div class="aggregate-prototype"><div class="attributes"></div><span class="builtin-type">struct</span> TileSet  {<div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">SDL_Rect</span>[]</tt> <span class="name">mRectTiles</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">SDL_Texture</span>*</tt> <span class="name">mTexture</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">int</span></tt> <span class="name">mTileSize</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">int</span></tt> <span class="name">mXTiles</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">int</span></tt> <span class="name">mYTiles</span>;</div><div class="aggregate-member"><a href="tilemap._Tile_Set.this.html"><span class="lang-feature name">this</span>(SDL_Renderer* renderer, string filepath, int tileSize, int xTiles, int yTiles);</a></div><div class="aggregate-member"><a href="tilemap._Tile_Set._View_Tiles.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">ViewTiles</span>(SDL_Renderer* renderer, int x, int y, int zoomFactor);</a></div><div class="aggregate-member"><a href="tilemap._Tile_Set._Tile_Set_Selector.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">TileSetSelector</span>(SDL_Renderer* renderer);</a></div><div class="aggregate-member"><a href="tilemap._Tile_Set._Render_Tile.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">RenderTile</span>(SDL_Renderer* renderer, int tile, int x, int y, int zoomFactor);</a></div>}</div></div><h2 id="constructors"><a class="header-anchor" href="#constructors">Constructors</a></h2><dl class="member-list constructors"><dt><a href="tilemap._Tile_Set.this.html">this</a><div class="simplified-prototype" style="max-width: 91ch;"><span class="lang-feature name">this</span>(SDL_Renderer* renderer, string filepath, int tileSize, int xTiles, int yTiles)</div></dt><dd><div><p>Initializes the TileSet with a texture from a given file path.
+The texture is loaded and divided into tiles based on specified dimensions.</p></div></dd></dl><h2 id="members"><a class="header-anchor" href="#members">Members</a></h2><h3 class="member-list-header hide-from-toc" id="function"><a class="header-anchor" href="#function">Functions</a></h3><dl class="member-list native"><dt><a href="tilemap._Tile_Set._Render_Tile.html">RenderTile</a><div class="simplified-prototype" style="max-width: 86ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">RenderTile</span>(SDL_Renderer* renderer, int tile, int x, int y, int zoomFactor)</div></dt><dd><div><p>Renders a specific tile from the tileset at a given position.</p></div></dd><dt><a href="tilemap._Tile_Set._Tile_Set_Selector.html">TileSetSelector</a><div class="simplified-prototype" style="max-width: 48ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">TileSetSelector</span>(SDL_Renderer* renderer)</div></dt><dd><div><p>Highlights the tile currently under the mouse cursor.
+Useful for selecting or inspecting individual tiles in the tileset.</p></div></dd><dt><a href="tilemap._Tile_Set._View_Tiles.html">ViewTiles</a><div class="simplified-prototype" style="max-width: 74ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">ViewTiles</span>(SDL_Renderer* renderer, int x, int y, int zoomFactor)</div></dt><dd><div><p>Displays all tiles from the tileset in a sequence for preview.
+The tiles are rendered in order, allowing for quick visual inspection of the entire tileset.</p></div></dd></dl><div></div></div>
+		<div id="page-nav"><a class="parent" href="tilemap.html">tilemap</a> 
+		<span class="type-separator">structs</span><ul><li><a class="struct" href="tilemap._Drawable_Tile_Map.html">DrawableTileMap</a></li><li><a class="struct current" href="tilemap._Tile_Set.html">TileSet</a></li></ul></div>
+	</div>
+	<div id="page-footer">Page generated by <a href="https://github.com/adamdruppe/adrdox">adrdox</a></div>
+</body>
+</html>

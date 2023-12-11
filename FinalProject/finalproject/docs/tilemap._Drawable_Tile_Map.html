@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>DrawableTileMap (tilemap.DrawableTileMap)</title>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="style.css" rel="stylesheet" />
+        <script src="script.js" type="text/javascript"></script>
+
+	
+	<link href="search-results.html" rel="prefetch" />
+</head>
+<body>
+	<div id="page-header">
+		<div id="logotype">
+		<span>Documentation</span>
+		<nav>
+			<a href="http://dlang.org/">Dlang.org</a>
+		</nav>
+		</div>
+
+		<form action="search-docs.html" id="search">
+			<input name="searchTerm" placeholder="Find a symbol name..." type="search" />
+			<input type="submit" value="Go" />
+		</form>
+	</div>
+	<div id="page-body">
+		<div id="page-content">
+		<h1>DrawableTileMap</h1><div class="breadcrumbs"><a class="breadcrumb" href="tilemap.html">tilemap</a> </div><div><div class="documentation-comment synopsis"><div><p>A struct for managing and rendering drawable tilemaps.</p><p>This struct allows for the creation and manipulation of tilemaps, including
+setting up different layers (floor, building, decoration), and rendering the
+tilemap to the screen.</p></div></div></div><div class="annotated-prototype"><div class="aggregate-prototype"><div class="attributes"></div><span class="builtin-type">struct</span> DrawableTileMap  {<div class="aggregate-member"><div class="attributes">const </div><tt class="highlighted"><span class="type">int</span></tt> <span class="name">mMapXSize</span>;</div><div class="aggregate-member"><div class="attributes">const </div><tt class="highlighted"><span class="type">int</span></tt> <span class="name">mMapYSize</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="hid">TileSet</span></tt> <span class="name">mTileSet</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">int</span>[<span class="hid">mMapXSize</span>][<span class="hid">mMapYSize</span>]</tt> <span class="name">mTiles</span>;</div><div class="aggregate-member"><div class="attributes"></div><tt class="highlighted"><span class="type">bool</span>[][]</tt> <span class="name">checkObstable</span>;</div><div class="aggregate-member"><a href="tilemap._Drawable_Tile_Map.this.html"><span class="lang-feature name">this</span>(TileSet t, int layerType);</a></div><div class="aggregate-member"><a href="tilemap._Drawable_Tile_Map.setup_Floor_Layer.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">setupFloorLayer</span>();</a></div><div class="aggregate-member"><a href="tilemap._Drawable_Tile_Map.setup_Building_Layer.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">setupBuildingLayer</span>();</a></div><div class="aggregate-member"><a href="tilemap._Drawable_Tile_Map.setup_Decoration_Layer.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">setupDecorationLayer</span>();</a></div><div class="aggregate-member"><a href="tilemap._Drawable_Tile_Map._Render.html"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">Render</span>(SDL_Renderer* renderer, int zoomFactor);</a></div><div class="aggregate-member"><a href="tilemap._Drawable_Tile_Map._Get_Tile_At.html"><tt class="highlighted"><span class="type">int</span></tt> <span class="name">GetTileAt</span>(int localX, int localY, int zoomFactor);</a></div><div class="aggregate-member"><a href="tilemap._Drawable_Tile_Map.can_Move.html"><tt class="highlighted"><span class="type">bool</span></tt> <span class="name">canMove</span>(int nextLocalX, int nextLocalY, int currentLocalX, int currentLocalY, int zoomFactor);</a></div>}</div></div><h2 id="constructors"><a class="header-anchor" href="#constructors">Constructors</a></h2><dl class="member-list constructors"><dt><a href="tilemap._Drawable_Tile_Map.this.html">this</a><div class="simplified-prototype" style="max-width: 33ch;"><span class="lang-feature name">this</span>(TileSet t, int layerType)</div></dt><dd><div><p>Initializes the DrawableTileMap with a specific TileSet and layer type.
+Different layers like floor, building, and decoration can be initialized.</p></div></dd></dl><h2 id="members"><a class="header-anchor" href="#members">Members</a></h2><h3 class="member-list-header hide-from-toc" id="function"><a class="header-anchor" href="#function">Functions</a></h3><dl class="member-list native"><dt><a href="tilemap._Drawable_Tile_Map._Get_Tile_At.html">GetTileAt</a><div class="simplified-prototype" style="max-width: 58ch;"><tt class="highlighted"><span class="type">int</span></tt> <span class="name">GetTileAt</span>(int localX, int localY, int zoomFactor)</div></dt><dd><div><p>Returns the tile index at a given position on the screen.
+Useful for identifying which tile is under the cursor or a game object.</p></div></dd><dt><a href="tilemap._Drawable_Tile_Map._Render.html">Render</a><div class="simplified-prototype" style="max-width: 56ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">Render</span>(SDL_Renderer* renderer, int zoomFactor)</div></dt><dd><div><p>Renders the tilemap on the screen.
+Iterates through the tile indices and draws each tile at its respective position.</p></div></dd><dt><a href="tilemap._Drawable_Tile_Map.can_Move.html">canMove</a><div class="simplified-prototype" style="max-width: 107ch;"><tt class="highlighted"><span class="type">bool</span></tt> <span class="name">canMove</span>(int nextLocalX, int nextLocalY, int currentLocalX, int currentLocalY, int zoomFactor)</div></dt><dd><div><p>Determines if movement to a specific position on the tilemap is possible.
+Used for collision detection or pathfinding logic.</p></div></dd><dt><a href="tilemap._Drawable_Tile_Map.setup_Building_Layer.html">setupBuildingLayer</a><div class="simplified-prototype" style="max-width: 27ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">setupBuildingLayer</span>()</div></dt><dd><div><p>Sets up the building layer of the tilemap.
+This method initializes the tiles array with indices for the building layer.</p></div></dd><dt><a href="tilemap._Drawable_Tile_Map.setup_Decoration_Layer.html">setupDecorationLayer</a><div class="simplified-prototype" style="max-width: 29ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">setupDecorationLayer</span>()</div></dt><dd><div><p>Sets up the decoration layer of the tilemap.
+This method initializes the tiles array with indices for the decoration layer.</p></div></dd><dt><a href="tilemap._Drawable_Tile_Map.setup_Floor_Layer.html">setupFloorLayer</a><div class="simplified-prototype" style="max-width: 24ch;"><tt class="highlighted"><span class="type">void</span></tt> <span class="name">setupFloorLayer</span>()</div></dt><dd><div><p>Sets up the floor layer of the tilemap.
+This method initializes the tiles array with indices for the floor layer.</p></div></dd></dl><div></div></div>
+		<div id="page-nav"><a class="parent" href="tilemap.html">tilemap</a> 
+		<span class="type-separator">structs</span><ul><li><a class="struct current" href="tilemap._Drawable_Tile_Map.html">DrawableTileMap</a></li><li><a class="struct" href="tilemap._Tile_Set.html">TileSet</a></li></ul></div>
+	</div>
+	<div id="page-footer">Page generated by <a href="https://github.com/adamdruppe/adrdox">adrdox</a></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+/graphics_project
+graphics_project.so
+graphics_project.dylib
+graphics_project.dll
+graphics_project.a
+graphics_project.lib
+graphics_project-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst

@@ -1,0 +1,48 @@
+{
+	"authors": [
+		"Pixel Pioneer"
+	],
+	"configurations": [
+		{
+			"excludedSourceFiles": [
+				"source/server.d",
+				"client.d"
+			],
+			"mainSourceFile": "source/app.d",
+			"name": "App",
+			"targetName": "app",
+			"targetType": "executable"
+		},
+		{
+			"excludedSourceFiles": [
+				"source/server.d",
+				"app.d"
+			],
+			"mainSourceFile": "client.d",
+			"name": "Client",
+			"targetName": "client",
+			"targetType": "executable"
+		},
+		{
+			"excludedSourceFiles": [
+				"client.d",
+				"app.d"
+			],
+			"mainSourceFile": "source/server.d",
+			"name": "Server",
+			"targetName": "server",
+			"targetType": "executable"
+		}
+	],
+	"copyright": "Copyright © 2023, Pixel Pioneer",
+	"targetType": "executable",
+    "targetPath": "bin",
+	"dependencies": {
+		"bindbc-sdl": "~>1.4.3",
+		"dscanner": "~>0.15.2",
+		"unit-threaded": "~>2.1.7"
+	},
+	"description": "Pixel Pioneer's Husky Town",
+	"license": "proprietary",
+	"name": "finalproject"
+}
