@@ -1,163 +1,45 @@
 <img src="./media/banner.png" alt="banner" />
 
-# Final Project!
+# Building Software
 
-## The Final Project Repository!
+- [ ] Instructions on how to build your software should be written in this file
+	- Installing SDL if you don't have. (https://wiki.libsdl.org/SDL2/Installation)
+	- Installing GTKD. with command apt-get install libgtkd-3-dev
+	- Once we open the project, redirect to the FinalProject/finalproject path.
+      		cd FinalProject/finalproject.
+	- Initialize the server using the following the command
+      		dub run --config=Server.
+	  Note: Take a note of the IP Address, Server Port Number and the Packet Port Number.
+	- Intitialize each client using the following command
+      		dub run.
+	- The Game shows up. Connect to the server using the IP Address, Server Port Number and Packet Port Number we have taken note of previously. Add an unique username for each client.
+	- Similarly, repeat the same process for each client who wish to join.
+	- Once the client has joined the server, they can start chatting by typing inside the terminal and move around in the game.
+ 	- Chatting and File Sharing feature:
+  		- The clients can send messages in the terminal and interact with other clients that are connected to the server using the terminal chat functionality.
+	 	- The client also has the option to send text file through the terminal by inputing -s along with the file path.
+			ex: -s D:\Study\fall2023\5500\finalproject-pixelpioneers\FinalProject\finalproject\source\sharedFile.txt
+	  	- All other clients that joined the server will get a notification to input a directory to save the shared file by inputing -r along with the destination path
+	  		ex: -r D:\Study\fall2023\5500\finalproject-pixelpioneers\FinalProject\finalproject
+	  	- The clients that received the file also have the option not to save it in their computer by not inputing -r and the directory path, they will the notified that the save is skipped.
+   		- The new client will be able to see the history chat messages by sending a first chat message.
+   	- Husky Town Map feature:
+   		- The clients will have their own character generated in the Husky Town.
+   	 	- They can move around using the arrow key.
+   	  	- The clients will be able to see the movements of other clients that joined the server.
+  	- The clients can end the chat and quit the game by either close the game window or entering -q in the terminal.
+	- To run dscanner navigate to D:\Study\fall2023\5500\finalproject-pixelpioneers\FinalProject\finalproject\source\
+		- To generate report.json run, dub run dscanner -- --report --reportFile report.json *.d 
+		- To generate HTML run, rdmd ../../report/reporter.d "report.json" > report.html
+	- To run ddocs run the following commands,
+		- dub run adrdox -- -i D:\Study\fall2023\5500\finalproject-pixelpioneers\FinalProject\finalproject\source 
+		- dub --build=docs
+	- To run unittests run the following command
+		- dub test
+- You should have at a minimum in your project
+	- [ ] A dub.json in a root directory
+    	- [ ] This should generate a 'release' version of your software
+  - [ ] Run your code with the latest version of d-scanner before commiting your code (could be a github action)
+  - [ ] (Optional) Run your code with the latest version of clang-tidy  (could be a github action)
 
-Welcome to the final project repository!  
-
-Here is a welcome video showing the repoisory organization--be sure to read carefully through the instructions (Consuming a large spec and breaking it down is part of engineering!).
-
-<a href="https://youtu.be/F0XVOL1zQHM">
-<img src="./media/FinalProject.png" alt="Click for final project video" width="300">
-</a>
-
-https://youtu.be/F0XVOL1zQHM
-
-
-## Repository Organization 
-
-1. There are no more individual assignments.
-2. You will complete your final project in the [final project directory](./FinalProject). The organization is partially up to you on the file structure and organization, just make sure you organize it logically and against any requirements.
-
-## Team
-
-**Team Name**: *Pixel Pioneers*
-
-Team member Names:
-
-1. *Kaushik Komanduri*
-2. *Subhankar Shah*
-3. *Ruixin Li*
-4. *Yunmu Shu*
-
-# Team spread sheet 
-
-- Your team members and project manager will be provided in class. 
-- Your project manager will be your first point of contact for various project deliverables and questions. Though you may continue to attend office hours with whoever you like, your project manager will be your primary contact.
-
-## Team Logistics
-
-- Work with your team to ensure everyone has a way to work on this codebase with a common set of tools.
-- Everyone should make code contributions to the repository (i.e. everyone should have some commits in the commit history -- even if you pair program, that means you need to switch who is in control!)
-- See the project timeline
-- Note: In semesters where I have a 'token system' for late days, **you cannot use any tokens** for the final project.
-
-## Notes on working in teams
-
-* [Four Ways to Lead Your Software Team to Success](https://hackernoon.com/four-ways-to-lead-software-team-to-success-43fa156719b4)
-* [The 3 C's of being a captain](https://appliedsportpsych.org/resources/resources-for-athletes/the-3-c-s-of-being-a-captain/)
-* [Etiquette for Pair Programming](https://dzone.com/articles/etiquette-for-pair-programming)
-
-# Rubric
- 
-<table>
-	<tbody>
-		<tr>
-			<th>Points</th>
-			<th align="center">Description</th>
-			</tr>
-			<tr>	  
-			<td>10% (Milestone Check-in #1)</td>
-				<td align="left">
-					<ul><li>Did you complete your check-in #1?</li><li>Was a timeline present?</li><li>Were there at least 10 tasks created in the 'Projects' tab</li></ul>
-				</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-	<tbody>
-		<tr>
-			<th>Points</th>
-			<th align="center">Description</th>
-			</tr>
-			<tr>	  
-			<td>10% (Milestone Check-in #2)</td>
-			<td align="left">
-				<ul><li>Did you complete your check-in #2?</li>
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-
-<table>
-	<tbody>
-		<tr>
-			<th>Points</th>
-			<th align="center">Description</th>
-			</tr>
-			<tr>	  
-			<td>5% (Youtube Video)</td>
-			<td align="left">
-				<ul><li>Did you upload a Youtube Video and test out opening it incognito mode so we could also access it?</li>
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <th>Points</th>
-      <th align="center">Description</th>
-    </tr>
-     <tr>
-	<td>10% (Team Assessment)</td>
-	<td align="left"><ul><li>Did you complete the assessment form which earns you 2%--the other 8% is determined by your team members responses</li><li>Note: In rare instances the instructor reserves the right to weigh the Team assessment more heavily. In the instance that a team member scores very low, the instructor will individually evaluate that students grade for the project.</li></ul></td>
-    </tr>	     
-  </tbody>
-</table>  
-
-
-<table>
-  <tbody>
-    <tr>
-      <th>Points</th>
-      <th align="center">Description</th>
-    </tr>
-     <tr>
-	<td>25% (Polish and completion)</td>
-	<td align="left"><ul><li>How polished are your materials(timeline, documentation, presentation)? Does your software work? Does it compile? Does it crash, segfault?</li></ul></td>
-    </tr>	     
-  </tbody>
-</table>  
-
-<table>
-  <tbody>
-    <tr>
-      <th>Points</th>
-      <th align="center">Description</th>
-    </tr>	     
-      <td>10% (Feature of your choice)</td>
-	<td align="left"><ul><li>Does your feature (related to 'sharing') work? Do you have at least 1 test case</li></ul></td> 
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <th>Points</th>
-      <th align="center">Description</th>
-    </tr>	     
-      <td>20% (Networking)</td>
-	<td align="left"><ul><li>Does your networking work?</li></ul></td> 
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
-    <tr>
-      <th>Points</th>
-      <th align="center">Description</th>
-    </tr>	     
-      <td>10% (Testing)</td>
-	<td align="left"><ul><li>Do you have at least 8 unit test cases? Are they properly integrated with a Github Action?</li></ul></td> 
-    </tr>
-  </tbody>
-</table>
-
-**Note** To be 100% clear, every team member gets the same grade with the exception of the peer assessment.
+*Modify this file to include instructions on how to build and run your software. Specify which platform you are running on. Running your software involves launching a server and connecting at least 2 clients to the server.*
