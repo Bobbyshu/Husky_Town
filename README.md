@@ -1,5 +1,15 @@
 <img src="./media/banner.png" alt="banner" />
 
+**Team Name**: *Pixel Pioneers*
+
+Team member Names:
+
+1. *Kaushik Komanduri*
+2. *Subhankar Shah*
+3. *Ruixin Li*
+4. *Yunmu Shu*  
+I'm mainly responsible for designing both client and server-side TCP communication modules using Socket programming techniques and integrating multi-thread for efficient game rendering and chat to enhance performance and interactivity.
+
 # Building Software
 
 - [ ] Instructions on how to build your software should be written in this file
